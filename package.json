@@ -1,0 +1,16 @@
+{
+  "name": "todo-app-main",
+  "version": "1.0.0",
+  "description": "",
+  "default": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "prince",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}
