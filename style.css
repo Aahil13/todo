@@ -11,6 +11,8 @@ body {
   font-size: 18px;
   font-family: 'Josefin Sans', sans-serif;
   font-weight:500;
+  position: relative;
+  min-height: 100vh;
 }
 
 .light--mode-body{
@@ -101,7 +103,6 @@ nav{
 
 .todo-box-filter{
   border-bottom: none;
-  margin-bottom: 6rem;
 }
 
 .draggable-list .todo-box.over.draggable{
@@ -149,11 +150,11 @@ nav{
 
 
 footer{
- position: relative;
+ position: absolute;
  bottom: 0;
  left: 0;
  right: 0;
- margin: 1rem auto;
+ margin: 1rem auto .5rem;
 }
 
 .toggle img{
@@ -179,19 +180,15 @@ footer{
   }
 }
 
-small{
-  margin-top: 2rem;
-}
 
 @media(max-width: 740px) {
   .sorters{
     position: absolute;
-    bottom: 1;
     width:80%;
     padding: .5rem 0;
     left: 0;
     right: 0;
-    margin: 3rem auto 0;
+    margin: 3.5rem auto 0;
   } 
   .light--sorters{
     border :0px solid hsl(0, 0%, 98%);
@@ -224,6 +221,7 @@ small{
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: .4rem;
 }
 
 .attribution a {
