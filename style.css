@@ -13,6 +13,7 @@ body {
   font-weight:500;
   position: relative;
   min-height: 100vh;
+  transition: all 1s;
 }
 
 .light--mode-body{
@@ -23,6 +24,12 @@ body {
 .dark--mode-body{
   background-color: hsl(235, 21%, 11%);
   color: hsl(234, 39%, 85%);
+}
+
+.header{
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1s;
 }
 
 nav{
@@ -36,6 +43,27 @@ nav{
   margin: 2rem 0 .5rem;
   border-radius: .3rem;
   font-weight: 500;
+  font-size: 18px;
+}
+
+.input-box{
+  position: relative;
+}
+
+.btn-add{
+  position: absolute;
+  bottom:9px;
+  right: 1px;
+  outline: none;
+  border: none;
+  padding: .66rem;
+  border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+}
+
+.btn-add img{
+  width: 20px;
+  height: 10px;
 }
 
 .light--mode-input{
@@ -215,6 +243,12 @@ footer{
     font-size: 2.4rem;
     letter-spacing: 7px;
     font-weight: 700;
+  }
+  .input-box input{
+    font-size: 13px;
+  }
+  .btn-add{
+    padding: .45rem;
   }
 }
 

@@ -14,6 +14,7 @@ const body = document.body;
 const todoFilter = document.querySelector(".todo-box-filter");
 const filter = document.querySelectorAll(".filter");
 const sorters = document.querySelector(".sorters");
+const btnAdd = document.querySelector(".btn-add");
 
 let inputValue;
 let taskArr = [];
@@ -171,26 +172,20 @@ const clearCompleted = function (items) {
   });
 };
 
-
 //drag and drop functionality
 const dragStart = function () {
-  // console.log('Event: ', 'dragstart');
   dragStartIndex = +this.closest("div").getAttribute("data-index");
 };
 const dragEnter = function () {
-  // console.log('Event: ', 'dragenter');
   this.classList.add("over");
 };
 const dragLeave = function () {
-  // console.log('Event: ', 'dragleave');
   this.classList.remove("over");
 };
 const dragOver = function (e) {
-  // console.log('Event: ', 'dragover');
   e.preventDefault();
 };
 const dragDrop = function () {
-  // console.log('Event: ', 'drop');
   const dragEndIndex = +this.getAttribute("data-index");
   swapItems(dragStartIndex, dragEndIndex);
 
@@ -222,7 +217,9 @@ const addEventListeners = function () {
   });
 };
 
-form.addEventListener("submit", generateNewTask);
+["click", "submit"].forEach((e) => {
+  form.addEventListener(e, generateNewTask);
+});
 
 //Rendering previous tasks
 window.addEventListener("load", () => {
